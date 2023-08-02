@@ -155,12 +155,14 @@ The following tests can be executed manually on the application frontend.
 
 # [Running the automated tests using cypress]
  
- - Install cypress into your machine
-  - `cd /{project path}`
-  - `npm install cypress --save-dev`
+- Launch the cypress UI from terminal (if this does not work initially start with installation step)
+   - `yarn run cypress open` 
 
-- Launch the cypress UI from terminal
-  - `yarn run cypress open` 
+- if cypress is not installed with the project run this installation  step (else skip)
+   -  Install cypress into your machine
+   - `cd /{project path}`
+   - `npm install cypress --save-dev`
+   - `yarn run cypress open` - lauch cypress UI
 
 - Cypress UI dasboard will be be lauched
 - Select end-end testing option (should be configured already)
