@@ -144,7 +144,7 @@ The following tests can be executed manually on the application frontend.
 >    - steps:
 >       - do not add the update value textbox
 >       - click the "update" button
->   - expected: current item will not updated if the value is null
+>   - expected: current item will not updated if the value is null - value stays the same
 >
 >   9. Check if items persist on another instance of the application
 >   - Pre-conditions: items added to a to do list
@@ -152,6 +152,25 @@ The following tests can be executed manually on the application frontend.
 >       - open todolist url on a different browser or tab 
 >       - (refresh page if changes have been made on one of the todo list)
 >   - expected: the todo list is displayed with all added items as on the original instance 
+
+# [Running the automated tests using cypress]
+ 
+ - Install cypress into your machine
+  - `cd /{project path}`
+  - `npm install cypress --save-dev`
+
+- Launch the cypress UI from terminal
+  - `yarn run cypress open` 
+
+- Cypress UI dasboard will be be lauched
+- Select end-end testing option (should be configured already)
+- Select browser of choice to execute tests on
+- You will be navigated into the TODOLIST specs folder
+- Click/lauch todolistapp script  (Pre-condition when running this script - make sure the todolist is in it's default state with no items added)
+- Test will run and update results on dashboard
+
+- NB: You will need to run `node app.js` on another terminal to create an instance of the todolist app 
+- NB: With every test run make sure the todolist application is in it's initial state (not items added)
 
 3. Bug Reports
 
