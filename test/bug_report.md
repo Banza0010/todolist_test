@@ -6,14 +6,14 @@
 ## **Empty update text sets list items to an empty value**
 
 ## Description
-When users click the update button without having entered any text in the updste value textbox, the list item gets cleared and set to an empty value
+When users click the update button without having entered any text in the update value textbox, the list item gets cleared and set to an empty value
 
 ## Proof showing bug/issue
 [screen recording of the actual issue being replicated] or [screenshots ] 
 
 ## Expected behvaior
 
-- If a user clicks the update button without having entered an update value, the item being updated should not update.
+- If a user clicks the update button without having entered an update value, the item being updated should not be changed.
 
 ## Current behavior
 
