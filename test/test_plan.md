@@ -156,6 +156,8 @@ The following tests can be executed manually on the application frontend.
 >   - expected: the todo list is displayed with all added items as on the original instance 
 
 # [Running the automated tests using cypress]
+
+- On git actual test script will be in the `cypress/e2e` folder
  
 - Launch the cypress UI from terminal (if this does not work initially start with installation step)
    - `yarn run cypress open` 
@@ -169,7 +171,7 @@ The following tests can be executed manually on the application frontend.
 - Cypress UI dasboard will be be lauched
 - Select end-end testing option (should be configured already)
 - Select browser of choice to execute tests on
-- You will be navigated into the TODOLIST specs folder
+- You will be navigated into the TODOLIST specs folder 
 - Click/lauch =todolistapp= script to run the end-2-end FE automated tests (**Pre-condition when running this script - make sure the todolist is in it's default state with no items added**)
 - Click/launch  api script to run the backend/api automated test(**Pre-condition when running this script - make sure the todolist is in it's default state with no items added**)
 - Test will run and update results on dashboard
