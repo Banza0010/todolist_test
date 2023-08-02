@@ -24,13 +24,13 @@ Features to be tested:
 - Removing todo list items
 - Retaining todo list items across instances
 - Cross browser functionality (chrome, brave, safari, firefox, edge)
+- Backend functionality of application (API)
 
 #### Out of Scope
 
 Features not to be tested:
 
 - UI design
-- There is no necessity for API testing 
 - Browser excluded (IE, Opera)
 
 
@@ -43,10 +43,9 @@ Features not to be tested:
 
 ### Roles and Resposibilities
 
-- Tester (QE/Analyst) - draft, complile and exceute test for the application on the test environment to ensure quality of the product and deploy tested version to the UAT environment
+- Tester (QE/Analyst) - draft, complile and exceute test for the application on the test environment to ensure quality of the product and deploy tested version to the UAT environment . Write automated frontend and backend tests for the application
 - Developer - deploy changes to test environments, add unit tests for extra test coverage, fix/patch bugs discovered during testing
 - Product owner - to verify acceptance criteria and UAT testing before go live 
-
 
 
 ## Test Strategy
@@ -55,6 +54,9 @@ Features not to be tested:
 
 We will be adopting an Agile testing approach for this project, as it also incorporates an incremental approach which will basically see us test out
 functionality as it is been developed with the ability to deploy tested functionality for UAT while other features are still pending as to shorten the feedback cycle. This approach will  also allow us a quick feedback loop to having bugs and issues resolved while the application is being built out.
+
+Testing will include front end end to end system tests and backend/API tests
+
 
 ### Suspension Criteria and Resumption Requirements
 
@@ -168,14 +170,15 @@ The following tests can be executed manually on the application frontend.
 - Select end-end testing option (should be configured already)
 - Select browser of choice to execute tests on
 - You will be navigated into the TODOLIST specs folder
-- Click/lauch todolistapp script  (**Pre-condition when running this script - make sure the todolist is in it's default state with no items added**)
+- Click/lauch =todolistapp= script to run the end-2-end FE automated tests (**Pre-condition when running this script - make sure the todolist is in it's default state with no items added**)
+- Click/launch  api script to run the backend/api automated test(**Pre-condition when running this script - make sure the todolist is in it's default state with no items added**)
 - Test will run and update results on dashboard
 
 - NB: **You will need to run `node app.js` on another terminal to create an instance of the todolist app**
 - NB: **With every test run make sure the todolist application is in it's initial state (not items added)**
 
-3. Bug Reports
 
+3. Bug Reports
 
 
 ## Resource & Environment Needs
@@ -194,7 +197,6 @@ The following tests can be executed manually on the application frontend.
 
 Software
 - Broswer (chrome, safari, brave)
-
 
 
 ## Terms/Acronyms 

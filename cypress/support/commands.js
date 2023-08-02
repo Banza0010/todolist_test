@@ -38,3 +38,35 @@ Cypress.Commands.add("add_item", () => {
     cy.get('#new-submit').click()                
     cy.get('#span-todo-0').should('have.text', 'item-1')
 })
+
+Cypress.Commands.add("add_items_api", () => {
+    const body = new URLSearchParams();
+    body.append("newtodo", 'test-item'); 
+    cy.request(
+        {
+            'method': 'POST',
+            'url': 'http://localhost:8080/todo/add',
+            'headers': {
+                'Accept': 'application/json',
+                'content-type': 'application/x-www-form-urlencoded',
+            },
+            body: Object.fromEntries(body),
+        })
+})
+
+Cypress.Commands.add("clear_list", () => {
+    cy.request(
+        {
+            'method': 'GET',
+            'url': 'http://localhost:8080/todo/delete/0' 
+        })
+        .then((r) => {
+            expect(r.status).to.eq(200)
+        }) 
+})
+
+Cypress.Commands.add("cleanup", () =>{
+    cy.wait(1000)
+    cy.clear_list() 
+    cy.reload() 
+})

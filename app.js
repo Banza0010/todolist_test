@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+const { request } = require("express");
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 var app = express();
@@ -14,6 +15,7 @@ var server = app
 
   /* Adding an item to the to do list */
   .post("/todo/add/", urlencodedParser, function(req, res) {
+    console.log(req.body);
     if (req.body.newtodo != "") {
       todolist.push(req.body.newtodo);
     }
